@@ -1,11 +1,31 @@
-encoding "utf8";               // указываем кодировку, в которой написан этот файл
+encoding "utf8";
 
-import "base.proto";           // подключаем описания protobuf-типов (TAuxDicArticle и прочих)
-import "articles_base.proto";  // Файлы base.proto и articles_base.proto встроены в компилятор.
-                               // Их необходимо включать в начало любого gzt-словаря.
+import "base.proto";
+import "articles_base.proto";
+
 import "facttypes.proto";
+import "kwtypes.proto";
 
-TAuxDicArticle "root"
-{
-    key = { "tomita:first.cxx" type=CUSTOM }
+road "шоссе" {
+    key = { "shosse_mo.txt" type=FILE }
+}
+
+road "проспект" {
+    key = { "prospect_mo.txt" type=FILE }
+}
+
+place "область" {
+    key = { "obl_ru.txt" type=FILE }
+}
+
+place "район" {
+    key = { "raion_ru.txt" type=FILE }
+}
+
+place "деревня" {
+    key = { "derevnya_ru.txt" type=FILE }
+}
+
+TAuxDicArticle "root" {
+    key = { "tomita:place/first.cxx" type=CUSTOM }
 }

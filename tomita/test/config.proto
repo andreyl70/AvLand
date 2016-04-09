@@ -9,12 +9,14 @@ TTextMinerConfig {
   }
 
   Output = {
-    // File = "../output/test/facts.xml";
-    Format = xml;
+    //File = "../output/test/res.txt";
+    Format = text;
   }
 
   Facts = [
-    { Name = "Debug" }
+    { Name = "Debug" },
+    { Name = "Place" },
+    { Name = "Distance" }
   ]
 
   PrintTree = '../output/test/tree.txt';

@@ -9,3 +9,15 @@ message Debug: NFactType.TFact
   optional string Item4 = 4;
   optional string Item5 = 5;
 }
+
+message Place: NFactType.TFact
+{
+  optional string Raion = 1;
+  optional string Derevnya = 2;
+}
+
+message Distance: NFactType.TFact
+{
+  required string ValKm = 1;
+  optional string Point = 2;
+}
